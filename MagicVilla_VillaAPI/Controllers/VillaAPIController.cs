@@ -16,7 +16,7 @@ namespace MagicVilla_VillaAPI.Controllers
             return Ok(VillaStore.villaList);
         }
         [HttpGet("id")]//This is must to know what type of endpoint it is otherwise we will get error
-        [ProducesResponseType(200)]
+        [ProducesResponseType(200)]//used to document error, here we need to guess what error that this endpoint will raise and write here
         [ProducesResponseType(404)]
         [ProducesResponseType(400)]
         public ActionResult<VillaDto> GetVillas(int id)
